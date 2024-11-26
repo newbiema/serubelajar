@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soal Matematika Seru!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+      <!-- Tambahkan Elemen Audio untuk memutar musik otomatis -->
+      <audio autoplay loop>
+        <source src="audio/lagu berhitung.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+<!-- Title -->
+<section class="w-full  text-center py-16 bg-gradient-to-r from-green-400 via-teal-500 to-blue-600 text-white shadow-lg rounded-lg transform transition duration-300 hover:scale-105">
+    <h1 class="text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s">
+      Ayo Belajar Matematika!
+    </h1>
+    <p class="mt-4 text-lg font-semibold text-gray-100 animate__animated animate__fadeIn animate__delay-2s">
+      Coba jawab soal-soal seru dan buktikan kemampuanmu!
+    </p>
+    <div class="mt-8">
+      <button class="px-8 py-3 bg-white text-green-600 font-bold rounded-full shadow-lg hover:bg-green-200 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500">
+        Mulai Belajar
+      </button>
+    </div>
+  </section>
+  
+
+<!-- Card Soal dan Penjelasan -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 my-8 mx-auto p-6">
+  <!-- Penjumlahan -->
+  <div class="p-6 bg-yellow-400 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+    <!-- Soal Penjumlahan -->
+    <div class="text-center mb-6">
+      <h2 class="text-3xl font-semibold mb-4">Berapa 3 + 2?</h2>
+      <input type="number" id="answer1" class="px-4 py-3 w-4/5 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg" placeholder="Masukkan jawabanmu" />
+      <button class="mt-4 py-2 px-6 bg-teal-500 text-white rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500" onclick="checkAnswer(1, 5)">Cek Jawaban</button>
+      <div id="feedback1" class="mt-4 text-xl font-semibold opacity-0 transition-opacity duration-300"></div>
+    </div>
+
+    <!-- Penjelasan Penjumlahan -->
+    <div class="mt-6 text-center bg-blue-100 p-6 rounded-lg">
+      <h3 class="text-2xl font-bold text-teal-600 mb-4">Penjelasan</h3>
+      <img src="img/3+2.png" alt="Ilustrasi Apel" class="mx-auto mb-4 rounded-lg">
+      <p class="text-lg text-gray-700">
+        Soal ini adalah soal penjumlahan sederhana. Kamu hanya perlu menambahkan angka 3 dan 2. 
+        Bayangkan kamu memiliki 3 apel, dan kamu menambahkannya dengan 2 apel lagi. Jadi, jumlah total apel yang kamu miliki adalah 5.
+      </p>
+      <p class="mt-4 text-lg text-gray-700">
+        Jangan khawatir jika jawabannya salah, terus berlatih dan kamu akan semakin mahir!
+      </p>
+    </div>
+  </div>
+
+  <!-- Pengurangan -->
+  <div class="p-6 bg-yellow-400 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+    <!-- Soal Pengurangan -->
+    <div class="text-center mb-6">
+      <h2 class="text-3xl font-semibold mb-4">Berapa 5 - 2?</h2>
+      <input type="number" id="answer2" class="px-4 py-3 w-4/5 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg" placeholder="Masukkan jawabanmu" />
+      <button class="mt-4 py-2 px-6 bg-teal-500 text-white rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500" onclick="checkAnswer(2, 3)">Cek Jawaban</button>
+      <div id="feedback2" class="mt-4 text-xl font-semibold opacity-0 transition-opacity duration-300"></div>
+    </div>
+
+    <!-- Penjelasan Pengurangan -->
+    <div class="mt-6 text-center bg-blue-100 p-6 rounded-lg">
+      <h3 class="text-2xl font-bold text-teal-600 mb-4">Penjelasan</h3>
+      <img src="img/5-2.png" alt="Ilustrasi Apel" class="mx-auto mb-4 rounded-lg">
+      <p class="text-lg text-gray-700">
+        Soal ini adalah soal pengurangan sederhana. Kamu memiliki 5 apel, dan kemudian kamu makan 2 apel. 
+        Jadi, sisa apel yang kamu miliki adalah 3 apel.
+      </p>
+      <p class="mt-4 text-lg text-gray-700">
+        Terus berlatih ya, kamu akan semakin pintar dalam pengurangan!
+      </p>
+    </div>
+  </div>
+
+  <!-- Perkalian -->
+  <div class="p-6 bg-yellow-400 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+    <!-- Soal Perkalian -->
+    <div class="text-center mb-6">
+      <h2 class="text-3xl font-semibold mb-4">Berapa 4 x 2?</h2>
+      <input type="number" id="answer3" class="px-4 py-3 w-4/5 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg" placeholder="Masukkan jawabanmu" />
+      <button class="mt-4 py-2 px-6 bg-teal-500 text-white rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500" onclick="checkAnswer(3, 8)">Cek Jawaban</button>
+      <div id="feedback3" class="mt-4 text-xl font-semibold opacity-0 transition-opacity duration-300"></div>
+    </div>
+
+    <!-- Penjelasan Perkalian -->
+    <div class="mt-6 text-center bg-blue-100 p-6 rounded-lg">
+      <h3 class="text-2xl font-bold text-teal-600 mb-4">Penjelasan</h3>
+      <img src="img/4x2.png" alt="Ilustrasi Apel" class="mx-auto mb-4 rounded-lg">
+      <p class="text-lg text-gray-700">
+        Soal ini adalah soal perkalian sederhana. Kamu memiliki 4 apel, dan kamu memiliki apel yang sama.
+        Jadi, jumlah total apel yang kamu miliki jika kamu gabungin adalah 4 x 2 = 8 apel.
+      </p>
+      <p class="mt-4 text-lg text-gray-700">
+        Semangat terus! Latihan perkalian akan membuatmu semakin cepat!
+      </p>
+    </div>
+  </div>
+
+  <!-- Pembagian -->
+  <div class="p-6 bg-yellow-400 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+    <!-- Soal Pembagian -->
+    <div class="text-center mb-6">
+      <h2 class="text-3xl font-semibold mb-4">Berapa 8 / 2?</h2>
+      <input type="number" id="answer4" class="px-4 py-3 w-4/5 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg" placeholder="Masukkan jawabanmu" />
+      <button class="mt-4 py-2 px-6 bg-teal-500 text-white rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500" onclick="checkAnswer(4, 4)">Cek Jawaban</button>
+      <div id="feedback4" class="mt-4 text-xl font-semibold opacity-0 transition-opacity duration-300"></div>
+    </div>
+
+    <!-- Penjelasan Pembagian -->
+    <div class="mt-6 text-center bg-blue-100 p-6 rounded-lg">
+      <h3 class="text-2xl font-bold text-teal-600 mb-4">Penjelasan</h3>
+      <img src="img/8 bagi 2.png" alt="Ilustrasi Apel" class="mx-auto mb-4 rounded-lg">
+      <p class="text-lg text-gray-700">
+        Soal ini adalah soal pembagian sederhana. Kamu memiliki 8 apel dan kamu ingin membaginya ke dalam 2 keranjang yang sama. 
+        Setiap keranjang akan mendapatkan 4 apel. Jadi, 8 / 2 = 4 apel per keranjang.
+      </p>
+      <p class="mt-4 text-lg text-gray-700">
+        Terus berlatih ya! Pembagian akan membantumu memahami cara distribusi yang adil!
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Tombol Kembali ke Halaman Utama -->
+<div class="text-center mt-8 p-5">
+  <a href="home.php" class="px-6 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500">
+    Kembali ke Halaman Utama
+  </a>
+</div>
+
+
+
+<!-- Script for answer check -->
+<script>
+  function checkAnswer(questionNumber, correctAnswer) {
+    const userAnswer = document.getElementById(`answer${questionNumber}`).value;
+    const feedbackElement = document.getElementById(`feedback${questionNumber}`);
+    
+    // Reset feedback visibility
+    feedbackElement.classList.remove('opacity-100', 'text-teal-500', 'text-red-500');
+    
+    setTimeout(() => {
+      if (parseInt(userAnswer) === correctAnswer) {
+        feedbackElement.textContent = "Yay! Jawabanmu benar! 🎉";
+        feedbackElement.classList.add('text-teal-500');
+      } else {
+        feedbackElement.textContent = "Oh no, jawabanmu salah! Coba lagi! 😢";
+        feedbackElement.classList.add('text-red-500');
+      }
+      // Show feedback
+      feedbackElement.classList.add('opacity-100');
+    }, 200);
+  }
+</script>
+
+</body>
+</html>
